@@ -9,7 +9,7 @@ services:
     ports:
       - 3000:3000
     networks:
-      - stwrkng
+      - next-start
   proxy:
     image: staticfloat/nginx-certbot
     restart: always
@@ -19,12 +19,12 @@ services:
       - "80:80"
       - "443:443"
     networks:
-      - stwrkng
+      - next-start
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/user.conf.d:ro
       - ./certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro
 
 networks:
-  stwrkng:
+  next-start:
     driver: bridge
