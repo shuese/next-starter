@@ -1,13 +1,13 @@
 version: "3.8"
 
 services:
-  front:
+  nextjs:
     build:
       dockerfile: Dockerfile
       context: ./frontend
     restart: unless-stopped
     ports:
-      - 3001:3001
+      - 3000:3000
     networks:
       - stwrkng
   proxy:
