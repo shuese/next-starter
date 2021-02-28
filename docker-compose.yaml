@@ -17,7 +17,7 @@ services:
     environment:
       CERTBOT_EMAIL: "aprosvirov093@gmail.com"
     ports:
-      - "80:80"
+      - "81:80"
       - "443:443"
     networks:
       - next-start
